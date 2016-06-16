@@ -1,0 +1,6 @@
+# Temporary files
+*.swp
+
+# Downloaded and generated
+babel-output/
+node_modules/
