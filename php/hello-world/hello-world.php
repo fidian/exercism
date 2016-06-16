@@ -1,13 +1,16 @@
 <?php
 
-//
-// This is only a SKELETON file for the "Hello World" exercise.
-// It's been provided as a convenience to get you started writing code faster.
-//
+/**
+ * Greet someone by name.  When no name is passed, return a greeting
+ * to the entire world.
+ *
+ * @param string [$name]
+ * @return string
+ */
+function helloWorld($name = "") {
+    if (! $name) {
+        $name = "World";
+    }
 
-function helloWorld($name)
-{
-    //
-    // YOUR CODE GOES HERE
-    //
+    return "Hello, $name!";
 }
