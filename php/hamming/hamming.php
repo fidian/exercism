@@ -1,13 +1,25 @@
 <?php
 
-//
-// This is only a SKELETON file for the "Hamming" exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+/**
+ * Compute the hamming distance between two strings.
+ *
+ * @param string $a
+ * @param string $b
+ * @return integer
+ * @throws InvalidArgumentException
+ */
+function distance($a, $b) {
+    if (strlen($a) !== strlen($b)) {
+        throw new InvalidArgumentException("DNA strands must be of equal length.");
+    }
 
-function distance($a, $b)
-{
-    //
-    // YOUR CODE GOES HERE
-    //
+    $differences = 0;
+
+    for ($i = 0; $i < strlen($a); $i += 1) {
+        if ($a[$i] !== $b[$i]) {
+            $differences += 1;
+        }
+    }
+
+    return $differences;
 }
